@@ -55,16 +55,21 @@
 <div id="background">
   <div id="foreground" class="mx-auto my-4 pt-2 pb-1 px-3 bg-body border border-secondary">
     <header>
-      <div class="d-flex align-items-center py-2"> 
+      <div class="d-flex align-items-center py-2">
         <img height="64" class="pe-2"
           src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Coat_of_Arms_of_Australia.svg"
           alt="Where our logo will be"
         />
         <h1 class="me-auto">Programming Club</h1>
-        <button class="btn btn-secondary my-2 my-sm-0" onclick="ToggleDarkMode()">
+        <!-- TODO: Fix button hitting into title on mobile -->
+        <!-- TODO: Support toggling darking mode without js -->
+        <!-- TODO: Fix first click after page load not doing anything -->
+        <button type="button" class="btn btn-secondary my-2 my-sm-0" onclick="ToggleDarkMode()">
           Toggle Dark Mode
         </button>
       </div>
+      <!-- TODO: Fix first item hitting into toggler on mobile -->
+      <!-- TODO: Support toggling menu without js on mobile -->
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,19 +77,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-justified w-100 mb-2 mb-md-0">
-              <li class="nav-item mb-2 px-2">
-                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-              </li>
-              <li class="nav-item mb-2 px-2">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item mb-2 px-2">
-                <a class="nav-link" href="membership.html">Membership</a>
-              </li>
-              <li class="nav-item mb-2 px-2">
-                <a class="nav-link" href="calendar.html">Calendar</a>
-              </li>
-            </ul>
+            <li class="nav-item mb-2 px-2">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item mb-2 px-2">
+              <a class="nav-link active" aria-current="page" href="#">About Us</a>
+            </li>
+            <li class="nav-item mb-2 px-2">
+              <a class="nav-link" href="membership.html">Membership</a>
+            </li>
+            <li class="nav-item mb-2 px-2">
+              <a class="nav-link" href="calendar.html">Calendar</a>
+            </li>
+          </ul>
           </div>
         </div>
       </nav>
