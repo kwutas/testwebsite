@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PANDOC=./pandoc-3.6/bin/pandoc
+PANDOC=./pandoc/bin/pandoc
 ARGS="-s -f markdown-implicit_figures -c ./assets/empty.css templates/setup.yaml -B templates/header.html -A templates/footer.html"
 
 PAGES="home about membership calendar"
