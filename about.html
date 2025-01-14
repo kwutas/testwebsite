@@ -34,19 +34,16 @@
       const theme = dark ? 'dark' : 'light';
       document.documentElement.setAttribute('data-bs-theme', theme);
     }
-    window.onload = function() {
-      if (!window.matchmedia) {
-          return;
-      }
-      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    addEventListener("DOMContentLoaded", (event) => {
+      const dark = matchMedia('(prefers-color-scheme: dark)').matches || new URLSearchParams(location.search).has("dark");
       UpdateMode(dark);
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
           UpdateMode(event.matches);
       });
-    }
+    });
     function ToggleDarkMode() {
-      const dark = document.documentElement.getAttribute('data-bs-theme') == 'light';
-      UpdateMode(dark);
+      const dark = document.documentElement.getAttribute('data-bs-theme') == 'dark';
+      UpdateMode(!dark);
     }
   </script>
 </head>
@@ -61,7 +58,7 @@
       <h1 class="me-auto">Programming Club</h1>
       <!-- TODO: Fix button hitting into title on mobile -->
       <!-- TODO: Support toggling darking mode without js -->
-      <!-- TODO: Fix first click after page load not doing anything -->
+      <!-- TODO: Retain dark mode state between pages -->
       <button type="button" class="btn btn-secondary my-2 my-sm-0" onclick="ToggleDarkMode()">
         Toggle Dark Mode
       </button>
