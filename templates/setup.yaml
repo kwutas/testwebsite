@@ -10,8 +10,7 @@ header-includes: |
     <link rel="stylesheet" href="assets/style.css">
     <script>
       function UpdateMode(dark) {
-        const theme = dark ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-bs-theme', theme);
+        document.getElementById("dark-mode-toggle").checked = dark;
       }
       function UpdateUrl(url, dark) {
         const urlObj = new URL(url);
@@ -30,23 +29,23 @@ header-includes: |
           }
         }
       }
-      addEventListener("DOMContentLoaded", (event) => {
-        const preferDark = matchMedia('(prefers-color-scheme: dark)').matches;
-        const urlDark = new URLSearchParams(location.search).has("dark");
-        if (urlDark) {
-          UpdateNavItems(urlDark);
-        }
-        UpdateMode(preferDark || urlDark);
-        matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-          UpdateMode(event.matches);
-        });
-      });
+      // TODO: Move media check to css
+      // addEventListener("DOMContentLoaded", (event) => {
+      //   const preferDark = matchMedia('(prefers-color-scheme: dark)').matches;
+      //   const urlDark = new URLSearchParams(location.search).has("dark");
+      //   if (urlDark) {
+      //     UpdateNavItems(urlDark);
+      //   }
+      //   UpdateMode(preferDark || urlDark);
+      //   matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      //     UpdateMode(event.matches);
+      //   });
+      // });
       // TODO: Check for ?dark being removed via browser back and change to light mode
-      function ToggleDarkMode() {
-        const dark = document.documentElement.getAttribute('data-bs-theme') == 'dark';
-        history.pushState({}, null, UpdateUrl(location, !dark));
-        UpdateNavItems(!dark);
-        UpdateMode(!dark);
-      }
+      // function ToggleDarkMode() {
+      //   const dark = document.getElementById("dark-mode-toggle").checked;
+      //   history.pushState({}, null, UpdateUrl(location, !dark));
+      //   UpdateNavItems(!dark);
+      // }
     </script>
 ---
