@@ -24,17 +24,17 @@ for output_page in $PAGES; do
       continue
     fi
 
-    navbar="$navbar              <li class=\"nav-item mb-2 px-2\">\n"
-    navbar="$navbar                <a class=\"nav-link"
+    navbar="$navbar                <li class=\"nav-item mb-2 px-2\">\n"
+    navbar="$navbar                  <a class=\"nav-link"
     if [ "$output_page" = "$navbar_page" ]; then
       navbar="$navbar active\" aria-current=\"page\" href=\"#"
     else
       navbar="$navbar\" href=\"$navbar_page.html"
     fi
     navbar="$navbar\">$name</a>\n"
-    navbar="$navbar              </li>\n"
+    navbar="$navbar                </li>\n"
   done
-  navbar="$navbar            "
+  navbar="$navbar              "
 
   # shellcheck disable=SC2086
   $PANDOC $ARGS "pages/$output_page.md" -o "output/$output_page.html"
