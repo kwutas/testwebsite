@@ -14,9 +14,46 @@ body, html {
   left: 0;
 }
 
+#foreground {
+  max-width: 60rem;
+  /* TODO Use bootstrap shadow? */
+  box-shadow: 0px 0px 0px 2px rgba(var(--bs-tertiary-color-rgb), 0.25);
+}
+
+.nav-link {
+  line-height: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.05rem;
+  border: .1rem solid var(--bs-body-color);
+  /* TODO Use bootstrap shadow? */
+  box-shadow: 2px 2px var(--bs-secondary-bg);
+}
+
+.active {
+    color: var(--bs-tertiary-bg) !important;
+    background-color: var(--bs-tertiary-color);
+}
+
+.nav-link:hover {
+    color: var(--bs-body-bg) !important;
+    background-color: var(--bs-body-color);
+}
+
+#title-block-header {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+
+/*!
+ * Bootstrap  v5.3.3 (https://getbootstrap.com/)
+ * Copyright 2011-2024 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 #dark-mode-toggle:checked ~ #background {
   color: var(--bs-body-color) !important;
-    color-scheme: dark !important;
+  color-scheme: dark !important;
   --bs-body-color: #dee2e6 !important;
   --bs-body-color-rgb: 222, 226, 230 !important;
   --bs-body-bg: #212529 !important;
@@ -73,35 +110,4 @@ body, html {
 
 #dark-mode-toggle:checked ~ #background .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-#foreground {
-  max-width: 60rem;
-  /* TODO Use bootstrap shadow? */
-  box-shadow: 0px 0px 0px 2px rgba(var(--bs-tertiary-color-rgb), 0.25);
-}
-
-.nav-link {
-  line-height: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.05rem;
-  border: .1rem solid var(--bs-body-color);
-  /* TODO Use bootstrap shadow? */
-  box-shadow: 2px 2px var(--bs-secondary-bg);
-}
-
-.active {
-    color: var(--bs-tertiary-bg) !important;
-    background-color: var(--bs-tertiary-color);
-}
-
-.nav-link:hover {
-    color: var(--bs-body-bg) !important;
-    background-color: var(--bs-body-color);
-}
-
-#title-block-header {
-  margin-top: 1em;
-  margin-bottom: 2em;
-  text-align: center;
 }
