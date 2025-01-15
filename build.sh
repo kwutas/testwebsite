@@ -25,11 +25,11 @@ for output_page in $PAGES; do
     fi
 
     navbar="$navbar                <li class=\"nav-item mb-2 px-2\">\n"
-    navbar="$navbar                  <a class=\"nav-link"
+    navbar="$navbar                  <a class=\"nav-link pt-1\""
     if [ "$output_page" = "$navbar_page" ]; then
-      navbar="$navbar active\" aria-current=\"page\" href=\"#"
+      navbar="$navbar aria-current=\"page\" href=\"#"
     else
-      navbar="$navbar\" href=\"$navbar_page.html"
+      navbar="$navbar href=\"$navbar_page.html"
     fi
     navbar="$navbar\">$name</a>\n"
     navbar="$navbar                </li>\n"
