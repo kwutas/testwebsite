@@ -13,15 +13,39 @@ header-includes: |
         const theme = dark ? 'dark' : 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
       }
+      function UpdateUrl(url, dark) {
+        const urlObj = new URL(url);
+        if (dark) {
+          urlObj.searchParams.set("dark", "");
+        } else {
+          urlObj.searchParams.delete("dark");
+        }
+        return urlObj.href.replace("dark=", "dark");
+      }
+      function UpdateNavItems(dark) {
+        const items = document.getElementsByClassName("nav-link");
+        for (let item of items) {
+          if (!item.ariaCurrent) {
+            item.href = UpdateUrl(item.href, dark);
+          }
+        }
+      }
       addEventListener("DOMContentLoaded", (event) => {
-        const dark = matchMedia('(prefers-color-scheme: dark)').matches || new URLSearchParams(location.search).has("dark");
-        UpdateMode(dark);
+        const preferDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        const urlDark = new URLSearchParams(location.search).has("dark");
+        if (urlDark) {
+          UpdateNavItems(urlDark);
+        }
+        UpdateMode(preferDark || urlDark);
         matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-            UpdateMode(event.matches);
+          UpdateMode(event.matches);
         });
       });
+      // TODO: Check for ?dark being removed via browser back and change to light mode
       function ToggleDarkMode() {
         const dark = document.documentElement.getAttribute('data-bs-theme') == 'dark';
+        history.pushState({}, null, UpdateUrl(location, !dark));
+        UpdateNavItems(!dark);
         UpdateMode(!dark);
       }
     </script>
