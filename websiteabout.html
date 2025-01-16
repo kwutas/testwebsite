@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Programming Club – About Website</title>
+  <title>Programming Club – About this Website</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -96,10 +96,10 @@
         <!-- TODO: Support toggling menu without js on mobile -->
         <nav class="navbar navbar-expand-md">
           <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarPages" aria-controls="navbarPages" aria-expanded="false" aria-label="Toggle header navigation with pages">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="navbarPages" class="collapse navbar-collapse">
               <ul class="navbar-nav nav-justified w-100 mb-2 mb-md-0">
                 <li class="nav-item mb-2 px-2">
                   <a class="nav-link pt-1" href="home.html">Home</a>
@@ -120,7 +120,7 @@
       </header>
       <div class="container">
 <header id="title-block-header">
-<h1 class="title">About Website</h1>
+<h1 class="title">About this Website</h1>
 </header>
 <p>This is a preview of the Programming Club’s redesigned website.<br />
 Designed by Kentaro Watts.<br />
@@ -138,11 +138,11 @@ Version: v2.0.0-preview<br />
 Bootstrap version: v5.3.3<br />
 Bootstrap Icons version: v1.13.3<br />
 <!-- TODO: Parse to local time with js? --> Last built:
-2025-01-16T18:08:54<br />
-Git commit: ba5a2803ee505e5f27ebb09e0f6d7da4f9588330<br />
+2025-01-16T22:11:49+11:00<br />
+Git commit: 69604868c4e30d19716fc5a9edce9cfbe159c7de<br />
 Git commit author(s): Joshua Wierenga (joshuagit@joshuawierenga.tech)<br />
 <!-- TODO: Parse to local time with js? --> Git commit time:
-2025-01-16T18:08:28+11:00<br />
+2025-01-16T22:11:20+11:00<br />
 Git commit branch: main<br />
 <!-- TODO: Uncomment once js dark mode support is back -->
 <!-- <span class="js-only" hidden>
@@ -151,14 +151,48 @@ Using a js based dark mode system with full persistance between pages and browse
 without persistance between pages and limited browser level suppport.
 <!--</noscript> --></p>
       </div>
-      <div style="text-align: right;">
-        <a class="btn" href="websiteabout.html" aria-label="Find out about the development of this website">
-          <svg class="bi" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-          </svg>
-        </a>
-      </div>
+      <hr />
+      <aside>
+        <!-- TODO: Fix first item hitting into toggler on mobile -->
+        <!-- TODO: Support toggling menu without js on mobile -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSocials" aria-controls="navbarSocials" aria-expanded="false" aria-label="Toggle footer navigation with social media links">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSocials" class="collapse navbar-collapse">
+              <ul class="navbar-nav nav-justified w-100 mb-2 mb-md-0">
+                <li class="nav-item mb-2 px-2">
+                  <a class="nav-link pt-1" href="https://campus.hellorubric.com/?s=6055">Rubric Memberships</a>
+                </li>
+                <li class="nav-item mb-2 px-2">
+                  <a class="nav-link pt-1" href="https://discord.gg/d6RdH2bfJ8">Discord</a>
+                </li>
+                <li class="nav-item mb-2 px-2">
+                  <a class="nav-link pt-1" href="https://github.com/UTAS-Programming-Club/">Github</a>
+                </li>
+                <li class="nav-item mb-2 px-2">
+                  <a class="nav-link pt-1" href="https://www.instagram.com/programmingclub.tas/">Instagram</a>
+                </li>
+                <li class="nav-item mb-2 px-2">
+                  <a class="nav-link pt-1" href="https://www.facebook.com/ProgrammingClubTas/">Facebook</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </aside>
+      <footer>
+        <div class="d-flex align-items-center">
+          <span class="me-auto">The Programming Club is affiliated with <a href="https://tusa.org.au/">TUSA</a>.</span>
+          <a class="btn" href="websiteabout.html" aria-label="Find out about the development of this website">
+            <svg class="bi" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+            </svg>
+          </a>
+        </div>
+      </footer>
     </div>
   </div>
 </body>
