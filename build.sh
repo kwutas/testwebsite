@@ -1,13 +1,16 @@
 #!/bin/sh
 
-# TODO: Add favicon
 # TODO: Add embed stuff for Discord
 
-ARGS=""
+if [ ! -f bin/pandoc ] || [ ! -f bin/magick ]; then
+  printf "Required binaries are missing, please run setup.sh to acquire them\n"
+  exit 1
+fi
 
 PAGES="index about membership calendar websiteabout"
 
-mkdir -p output/assets/
+PANDOC_VERSION=$(bin/pandoc -v | sed -n 's/^pandoc //p')
+MAGICK_VERSION=$(bin/magick --version | sed -n 's/^Version: ImageMagick \([[:digit:]]\{1,\}\.[[:digit:]]\{1,\}\.[[:digit:]]\{1,\}-[[:digit:]]\{1,\}\).*/\1/p')
 
 BUILD_TIME=$(date "+%Y-%m-%dT%T")$(./gettimezone.sh)
 #TODO: Make a link if commit has been pushed, `sed -e 's#^git@github.com:#https://github.com/#' -e 's#.git$#/commit/#'` should be useful
@@ -22,6 +25,8 @@ BUILD_COMMIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [ "$BUILD_COMMIT_AUTHORS" = "BUILD_COMMIT_COMMITTER" ]; then
   BUILD_COMMIT_AUTHORS="$BUILD_COMMIT_AUTHORS, $BUILD_COMMIT_COMMITTER"
 fi
+
+mkdir -p output/assets/
 
 # TODO: Set html language
 # TODO: Avoid user-scalable=yes on viewport meta element
@@ -58,7 +63,8 @@ for output_page in $PAGES; do
   bin/pandoc -s -f markdown-implicit_figures -c ./assets/empty.css templates/setup.yaml\
              -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
              -o "output/$output_page.html"
-  sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`"  -e "s/%BUILD_TIME%/$BUILD_TIME/"\
+  sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`"  -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
+             -e "s/%MAGICK_VERSION%/$MAGICK_VERSION/" -e "s/%BUILD_TIME%/$BUILD_TIME/"\
              -e "s/%BUILD_COMMIT%/$BUILD_COMMIT/" -e "s/%BUILD_COMMIT_AUTHOR%/$BUILD_COMMIT_AUTHORS/"\
              -e "s/%BUILD_COMMIT_TIME%/$BUILD_COMMIT_TIME/" -e "s/%BUILD_COMMIT_BRANCH%/$BUILD_COMMIT_BRANCH/"\
              -n -e '/empty.css/!p' "output/$output_page.html"

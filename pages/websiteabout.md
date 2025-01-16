@@ -8,12 +8,16 @@ This is a preview of the Programming Club's redesigned website.
 Designed by Kentaro Watts.  
 Implemented by Joshua Wierenga and Kentaro Watts.  
 
-This website relies of [Bootstrap 5](https://getbootstrap.com/), licensed under [MIT](https://github.com/twbs/bootstrap/blob/v5.3.3/LICENSE) 
+Built using [Pandoc](https://pandoc.org/)'s Markdown to HTML converter as a static site generator with images prepared with [ImageMagick](https://imagemagick.org/).  
+This website relies on [Bootstrap 5](https://getbootstrap.com/), licensed under [MIT](https://github.com/twbs/bootstrap/blob/v5.3.3/LICENSE) 
 and various icons from [Bootstrap Icons](https://icons.getbootstrap.com/), also licensed under [MIT](https://github.com/twbs/icons/blob/v1.11.3/LICENSE).  
 Special thanks to Nathaniel for their css only dark mode toggle [code](https://endtimes.dev/no-javascript-dark-mode-toggle/).
 
 Website info:  
 Version: v2.0.0-preview  
+Pandoc version: %PANDOC_VERSION%  
+ImageMagick version: %MAGICK_VERSION%  
+<!-- Move to build.sh so setup.yaml can use the same variable -->
 Bootstrap version: v5.3.3  
 Bootstrap Icons version: v1.13.3  
 <!-- TODO: Parse to local time with js? -->
