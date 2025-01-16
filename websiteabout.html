@@ -22,7 +22,8 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <meta name="author" content="Programming Club" />
+  <meta name="author" content="Programming Club">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap">
@@ -76,12 +77,10 @@
     <div id="foreground" class="mx-auto my-4 pt-2 pb-1 px-3 bg-body border border-secondary">
       <header>
         <div class="d-flex align-items-center py-2">
-          <img height="64" class="pe-2"
-            src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Coat_of_Arms_of_Australia.svg"
-            alt="Where our logo will be"
-          />
+          <img height="64" class="pe-2" src="assets/icon.png" alt="Programming Club logo">
           <h1 class="me-auto">Programming Club</h1>
           <!-- TODO: Fix button hitting into title on mobile -->
+          <!-- TODO: Fix button alignment, the svg is aligned with the title but not it's border when clicked -->
           <label class="btn my-2 my-sm-0" for="dark-mode-toggle" onclick="ToggleDarkMode()">
             <svg id="light-mode-icon" class="bi text-warning h3" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" focusable="false" xmlns="http://www.w3.org/2000/svg" >
               <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
@@ -102,7 +101,7 @@
             <div id="navbarPages" class="collapse navbar-collapse">
               <ul class="navbar-nav nav-justified w-100 mb-2 mb-md-0">
                 <li class="nav-item mb-2 px-2">
-                  <a class="nav-link pt-1" href="home.html">Home</a>
+                  <a class="nav-link pt-1" href="index.html">Home</a>
                 </li>
                 <li class="nav-item mb-2 px-2">
                   <a class="nav-link pt-1" href="about.html">About Us</a>
@@ -138,11 +137,11 @@ Version: v2.0.0-preview<br />
 Bootstrap version: v5.3.3<br />
 Bootstrap Icons version: v1.13.3<br />
 <!-- TODO: Parse to local time with js? --> Last built:
-2025-01-16T22:15:39+11:00<br />
-Git commit: 1c29936dee0e780fec5fa6a7502a871d2d8865a8<br />
+2025-01-16T23:30:48+11:00<br />
+Git commit: ef0a5087102872a2635e0171c0cf6bc84fb88b42<br />
 Git commit author(s): Joshua Wierenga (joshuagit@joshuawierenga.tech)<br />
 <!-- TODO: Parse to local time with js? --> Git commit time:
-2025-01-16T22:14:55+11:00<br />
+2025-01-16T23:29:19+11:00<br />
 Git commit branch: main<br />
 <!-- TODO: Uncomment once js dark mode support is back -->
 <!-- <span class="js-only" hidden>
@@ -151,7 +150,7 @@ Using a js based dark mode system with full persistance between pages and browse
 without persistance between pages and limited browser level suppport.
 <!--</noscript> --></p>
       </div>
-      <hr />
+      <hr>
       <aside>
         <!-- TODO: Fix first item hitting into toggler on mobile -->
         <!-- TODO: Support toggling menu without js on mobile -->
