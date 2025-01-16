@@ -9,4 +9,4 @@ Join us for social events, weekly club meet-ups, professional development and ne
 
 ![Club members gathered in a large room while watching someone present](https://programmingclub.com.au/assets/photos/first_in_person.jpg "Our first ever club meet-up"){class="img-fluid"}
 
-<h3 style="text-align: center;"><br/>You dream it; we help you do it</h3>
+<h3 class="text-center"><br>You dream it; we help you do it</h3>
