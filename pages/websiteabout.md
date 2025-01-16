@@ -1,5 +1,6 @@
 ---
 title: About this Website
+pagetitle: About Website
 no-nav-entry: True
 ---
 
