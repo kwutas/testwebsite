@@ -3,10 +3,9 @@
 # TODO: Add favicon
 # TODO: Add embed stuff for Discord
 
-PANDOC=./pandoc/bin/pandoc
-ARGS="-s -f markdown-implicit_figures -c ./assets/empty.css templates/setup.yaml -B templates/header.html -A templates/footer.html"
+ARGS=""
 
-PAGES="home about membership calendar websiteabout"
+PAGES="index about membership calendar websiteabout"
 
 mkdir -p output/assets/
 
@@ -56,7 +55,9 @@ for output_page in $PAGES; do
   navbar="$navbar              "
 
   # shellcheck disable=SC2086
-  $PANDOC $ARGS "pages/$output_page.md" -o "output/$output_page.html"
+  bin/pandoc -s -f markdown-implicit_figures -c ./assets/empty.css templates/setup.yaml\
+             -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
+             -o "output/$output_page.html"
   sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`"  -e "s/%BUILD_TIME%/$BUILD_TIME/"\
              -e "s/%BUILD_COMMIT%/$BUILD_COMMIT/" -e "s/%BUILD_COMMIT_AUTHOR%/$BUILD_COMMIT_AUTHORS/"\
              -e "s/%BUILD_COMMIT_TIME%/$BUILD_COMMIT_TIME/" -e "s/%BUILD_COMMIT_BRANCH%/$BUILD_COMMIT_BRANCH/"\
@@ -65,3 +66,6 @@ for output_page in $PAGES; do
 done
 
 cp -r assets/style.css output/assets/style.css
+
+bin/magick assets/DraftPCLogoV2.png -background none -resize 32x32 -density 32x32 output/assets/favicon.ico
+bin/magick assets/DraftPCLogoV2.png -background none -resize 250x253 -density 250x253 output/assets/icon.png
