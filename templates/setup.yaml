@@ -14,6 +14,8 @@ url-og: programmingclub.com.au/testwebsite/
 image-og: https://programmingclub.com.au/assets/photos/first_in_person.jpg
 locale-og: en_AU
 
+card-twitter: summary_large_image
+
 header-includes: |
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">

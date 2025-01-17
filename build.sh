@@ -59,7 +59,7 @@ for output_page in $PAGES; do
 
   # shellcheck disable=SC2086
   bin/pandoc templates/setup.yaml -s --template templates/template.html -f markdown-implicit_figures\
-             -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
+             --wrap=preserve -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
              -o "output/$output_page.html"
   sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`"  -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
              -e "s/%MAGICK_VERSION%/$MAGICK_VERSION/" -e "s/%BUILD_TIME%/$BUILD_TIME/"\
@@ -72,4 +72,5 @@ done
 cp -r assets/style.css output/assets/style.css
 
 bin/magick assets/DraftPCLogoV2.png -background none -resize 32x32 -density 32x32 output/assets/favicon.ico
+# TODO: Fix image being very slightly different every time it is built
 bin/magick assets/DraftPCLogoV2.png -background none -resize 250x253 -density 250x253 output/assets/icon.png

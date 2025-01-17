@@ -32,19 +32,22 @@ $endif$
 $if(robots-meta)$
   <meta name="robots" content="$robots-meta$">
 $endif$
-  <meta name="og:title" content="$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$">
-  <meta name="og:type" content="website">
+  <meta name="og:title" property="og:title" content="$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$">
+  <meta name="og:type" property="og:type" content="website">
 $if(url-og)$
-  <meta name="og:url" content "$url-og$">
+  <meta name="og:url" property="og:url" content "$url-og$">
 $endif$
 $if(image-og)$
-  <meta name="og:image" content="$image-og$">
+  <meta name="og:image" property="og:image" content="$image-og$">
 $endif$
 $if(description-meta)$
-  <meta name="og:description" content="$description-meta$">
+  <meta name="og:description" property="og:description" content="$description-meta$">
 $endif$
 $if(locale-og)$
-  <meta name="og:locale" content="$locale-og$">
+  <meta name="og:locale" property="og:locale" content="$locale-og$">
+$endif$
+$if(card-twitter)$
+  <meta name="twitter:card" content="$card-twitter$">
 $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 $for(css)$
