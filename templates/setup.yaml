@@ -1,14 +1,26 @@
 ---
 title-prefix: Programming Club
+lang: en
+dir: ltr
+css: assets/style.css
+
+author-meta: Programming Club
+description-meta: Join us for weekly club meet-ups, professional development and networking opportunities, ongoing club projects, a thriving Discord community, and more!
+robots-meta: noindex
+
+# TODO: Allow setting url and image per page, also add og:site_name
+url-og: programmingclub.com.au/testwebsite/
+# TODO: Add structured properties for og:image
+image-og: https://programmingclub.com.au/assets/photos/first_in_person.jpg
+locale-og: en_AU
+
 header-includes: |
-    <meta name="author" content="Programming Club">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
-    <link rel="stylesheet" href="assets/style.css">
     <script>
       function UpdateMode(dark) {
         document.getElementById("dark-mode-toggle").checked = dark;

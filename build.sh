@@ -28,8 +28,6 @@ fi
 
 mkdir -p output/assets/
 
-# TODO: Set html language
-# TODO: Avoid user-scalable=yes on viewport meta element
 for output_page in $PAGES; do
   navbar="\n"
   for navbar_page in $PAGES; do
@@ -60,7 +58,7 @@ for output_page in $PAGES; do
   navbar="$navbar              "
 
   # shellcheck disable=SC2086
-  bin/pandoc -s -f markdown-implicit_figures -c ./assets/empty.css templates/setup.yaml\
+  bin/pandoc templates/setup.yaml -s --template templates/template.html -f markdown-implicit_figures\
              -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
              -o "output/$output_page.html"
   sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`"  -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
