@@ -76,7 +76,7 @@ for output_page in $PAGES; do
   rm "output/$output_page.html.tmp"
 done
 
-cp -r assets/style.css output/assets/style.css
+cp assets/style.css output/assets/style.css
 
 # TODO: Make these optional as they are quite slow
 bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 32x32 -density 32x32 output/assets/favicon.ico
