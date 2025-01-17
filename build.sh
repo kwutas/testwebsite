@@ -1,13 +1,11 @@
 #!/bin/sh
 
-# TODO: Add embed stuff for Discord
-
 if [ ! -f bin/pandoc ] || [ ! -f bin/magick ]; then
   printf "Required binaries are missing, please run setup.sh to acquire them\n"
   exit 1
 fi
 
-PAGES="index about membership calendar websiteabout"
+PAGES="index projects events about websiteabout"
 
 PANDOC_VERSION=$(bin/pandoc -v | sed -n 's/^pandoc //p')
 MAGICK_VERSION=$(bin/magick --version | sed -n 's/^Version: ImageMagick \([[:digit:]]\{1,\}\.[[:digit:]]\{1,\}\.[[:digit:]]\{1,\}-[[:digit:]]\{1,\}\).*/\1/p')
@@ -29,8 +27,17 @@ fi
 mkdir -p output/assets/
 
 for output_page in $PAGES; do
+  if [ ! -f pages/"$output_page".md ]; then
+    printf "Page %s is missing, skipping\n" "$output_page"
+    continue
+  fi
+
   navbar="\n"
   for navbar_page in $PAGES; do
+    if [ ! -f pages/"$navbar_page".md ]; then
+      continue
+    fi
+
     ignore=$(sed -n 's/^no-nav-entry: //p' pages/"$navbar_page".md)
     if [ "$ignore" = True ]; then
       continue
