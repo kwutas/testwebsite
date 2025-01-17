@@ -5,8 +5,11 @@ pagetitle: Home
 
 Whether you're an absolute beginner or a seasoned professional; ICT student, faculty member, or just an interested person; the Programming Club will facilitate the pursuit of programming and project management proficiency at any level!
 
-Join us for social events, weekly club meet-ups, professional development and networking opportunities, ongoing club projects, a thriving Discord community, club Minecraft-server access, ROBOTS(!!!!), and more!
+Join us for social events, weekly club meet-ups, professional development and networking opportunities, ongoing club projects, a thriving Discord community, club Minecraft-server access, and more!
 
 ![Club members gathered in a large room while watching someone present](https://programmingclub.com.au/assets/photos/first_in_person.jpg "Our first ever club meet-up"){class="img-fluid"}
+
+<h2>Memberships</h2>
+With a Programming Club membership, you get access to our weekly Club events, ongoing Club projects, exclusive Minecraft server, and discounts to events! Sign up through our Rubric page.
 
 <h3 class="text-center"><br>You dream it; we help you do it</h3>
