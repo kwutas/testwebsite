@@ -48,7 +48,7 @@ for output_page in $PAGES; do
       name=$(sed -n 's/^title: //p' pages/"$navbar_page".md)
     fi
     if [ -z "$name" ]; then
-      printf "Skipping %s due to missing yaml title\n" "$navbar_page/$output_page.md"
+      printf "Skipping %s due to missing yaml title\n" "$navbar_page"
       continue
     fi
 
@@ -64,11 +64,10 @@ for output_page in $PAGES; do
   done
   navbar="$navbar              "
 
-  # shellcheck disable=SC2086
   bin/pandoc templates/setup.yaml -s --template templates/template.html -f markdown-implicit_figures\
              --wrap=preserve -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
              -o "output/$output_page.html"
-  sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`"  -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
+  sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`" -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
              -e "s/%MAGICK_VERSION%/$MAGICK_VERSION/" -e "s/%BUILD_TIME%/$BUILD_TIME/"\
              -e "s/%BUILD_COMMIT%/$BUILD_COMMIT/" -e "s/%BUILD_COMMIT_AUTHOR%/$BUILD_COMMIT_AUTHORS/"\
              -e "s/%BUILD_COMMIT_TIME%/$BUILD_COMMIT_TIME/" -e "s/%BUILD_COMMIT_BRANCH%/$BUILD_COMMIT_BRANCH/"\
