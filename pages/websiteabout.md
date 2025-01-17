@@ -27,7 +27,7 @@ Website info:
 * Git commit author(s): %BUILD_COMMIT_AUTHOR%
 <!-- TODO: Parse to local time with js? -->
 * Git commit time: %BUILD_COMMIT_TIME%
-* Git commit branch:  %BUILD_COMMIT_BRANCH%
+* Git commit branch: %BUILD_COMMIT_BRANCH%
 
 <!-- TODO: Uncomment once js dark mode support is back -->
 <!-- <span class="js-only" hidden>
