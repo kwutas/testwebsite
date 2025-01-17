@@ -78,6 +78,6 @@ done
 
 cp -r assets/style.css output/assets/style.css
 
-bin/magick assets/DraftPCLogoV2.png -background none -resize 32x32 -density 32x32 output/assets/favicon.ico
-# TODO: Fix image being very slightly different every time it is built
-bin/magick assets/DraftPCLogoV2.png -background none -resize 250x253 -density 250x253 output/assets/icon.png
+# TODO: Make these optional as they are quite slow
+bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 32x32 -density 32x32 output/assets/favicon.ico
+bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 250x253 -density 250x253 output/assets/icon.png
