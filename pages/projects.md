@@ -7,7 +7,8 @@ The Club mantains a series of programming projects to encourage learning and hel
 Organised from the bottom up, these projects are a way to apply skills and concepts from classes as well as knowledge gained outside university in a friendly and supportive environment.
 We aim to design projects that are accessible for people of varying skill levels and abilities.
 
-We only accept contributions to our projects from members so if you are interested but have not yet then please visit our Rubric page today.
+We only accept contributions to our projects from members so if you are interested but are not one yet, then please visit our Rubric page to become one.
+Additionally, any contributions made to our projects must include a copyright assignment to the Club. We plan to formalise this project in future to make it easy to do for first time contributors.
 
 <!-- TODO: Add pictures of projects -->
 
