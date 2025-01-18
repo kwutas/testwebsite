@@ -20,7 +20,7 @@ BUILD_COMMIT_TIME=$(git show -s --format=%cI)
 #TODO: Report if any local changes have occurred since last commit
 BUILD_COMMIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [ "$BUILD_COMMIT_AUTHORS" = "BUILD_COMMIT_COMMITTER" ]; then
+if [ "$BUILD_COMMIT_AUTHORS" != "$BUILD_COMMIT_COMMITTER" ]; then
   BUILD_COMMIT_AUTHORS="$BUILD_COMMIT_AUTHORS, $BUILD_COMMIT_COMMITTER"
 fi
 
