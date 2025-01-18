@@ -1,14 +1,14 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
 
-:: TODO: Use sed for everything else, timestamps may not be possible
+:: TODO: Get timestamps for build and commit time working, is it even possible on Windows with provided tools?
 
 SET "FILEMISSING="
-IF NOT EXIST bin\pandoc.exe FILEMISSING=1
-IF NOT EXIST bin\magick.exe FILEMISSING=1
-IF NOT EXIST bin\sed.exe FILEMISSING=1
+IF NOT EXIST bin\pandoc.exe SET "FILEMISSING=1"
+IF NOT EXIST bin\magick.exe SET "FILEMISSING=1"
+IF NOT EXIST bin\sed.exe SET "FILEMISSING=1"
 IF DEFINED FILEMISSING (
-  ECHO "Required binaries are missing, please run setup.sh to acquire them"
+  ECHO "Required binaries are missing, please run setup.bat to acquire them"
   EXIT 1
 )
 
@@ -17,6 +17,20 @@ SET "PAGES=index projects events about websiteabout"
 :: From https://superuser.com/a/1541378
 (SET LF=^
 %=EMPTY=%
+)
+
+FOR /F %%F IN ('bin\pandoc.exe -v ^| bin\sed.exe -n "s/^pandoc.exe //p"') DO SET "PANDOC_VERSION=%%F"
+FOR /F %%F IN ('bin\magick.exe --version ^| bin\sed.exe -n "s/^Version: ImageMagick \([[:digit:]]\{1,\}\.[[:digit:]]\{1,\}\.[[:digit:]]\{1,\}-[[:digit:]]\{1,\}\).*/\1/p"') DO SET "MAGICK_VERSION=%%F"
+
+FOR /F %%F IN ('git show -s --format^=%%H') DO SET "BUILD_COMMIT=%%F"
+FOR /F "tokens=*" %%F IN ('git show -s --format^=%%an') DO SET "BUILD_COMMIT_AUTHORS=%%F"
+FOR /F "tokens=*" %%F IN ('git show -s --format^=%%ae') DO SET "BUILD_COMMIT_AUTHORS=%BUILD_COMMIT_AUTHORS% (%%F)"
+FOR /F "tokens=*" %%F IN ('git show -s --format^=%%cn') DO SET "BUILD_COMMIT_COMMITTER=%%F"
+FOR /F "tokens=*" %%F IN ('git show -s --format^=%%ce') DO SET "BUILD_COMMIT_COMMITTER=%BUILD_COMMIT_COMMITTER% (%%F)"
+FOR /F %%F IN ('git rev-parse --abbrev-ref HEAD') DO SET "BUILD_COMMIT_BRANCH=%%F"
+
+IF NOT "%BUILD_COMMIT_AUTHORS%" == "%BUILD_COMMIT_COMMITTER%" (
+  SET "BUILD_COMMIT_AUTHORS=%BUILD_COMMIT_AUTHORS%, %BUILD_COMMIT_COMMITTER%"
 )
 
 IF NOT EXIST output\assets\ MKDIR output\assets\
@@ -30,10 +44,10 @@ IF NOT EXIST output\assets\ MKDIR output\assets\
       IF EXIST pages\%%n.md (
         SET "ignore="
         SET "name="
-        FOR /F "tokens=* USEBACKQ" %%F IN (`bin\sed.exe -n "s/^no-nav-entry: //p" pages/"%%n".md`) DO SET "ignore=%%F"
+        FOR /F "tokens=*" %%F IN ('bin\sed.exe -n "s/^no-nav-entry: //p" pages/"%%n".md') DO SET "ignore=%%F"
         IF NOT DEFINED ignore (
-          FOR /F "tokens=* USEBACKQ" %%F IN (`bin\sed.exe -n "s/^pagetitle: //p" pages/%%n.md`) DO SET "name=%%F"
-          IF NOT DEFINED name FOR /F "tokens=* USEBACKQ" %%F IN (`bin\sed.exe -n "s/^title: //p" pages/%%n.md`) DO SET "name=%%F"
+          FOR /F "tokens=*" %%F IN ('bin\sed.exe -n "s/^pagetitle: //p" pages/%%n.md') DO SET "name=%%F"
+          IF NOT DEFINED name FOR /F "tokens=*" %%F IN ('bin\sed.exe -n "s/^title: //p" pages/%%n.md') DO SET "name=%%F"
           IF NOT DEFINED name (
             ECHO Skipping %%n due to missing yaml title
           ) ELSE (
@@ -57,7 +71,11 @@ IF NOT EXIST output\assets\ MKDIR output\assets\
                    -o "output\%%o.html"
     :: TODO: Figure out how to make sed.exe accept input directly
     ECHO s$%%NAVBAR_ITEMS%%$!navbar!$> sed.txt
-    bin\sed.exe -i.tmp -f sed.txt  "output\%%o.html"
+    bin\sed.exe -i.tmp -f sed.txt -e "s/%%PANDOC_VERSION%%/%PANDOC_VERSION%/"^
+                       -e "s/%%MAGICK_VERSION%%/%MAGICK_VERSION%/"^
+                       -e "s/%%BUILD_COMMIT%%/%BUILD_COMMIT%/" -e "s/%%BUILD_COMMIT_AUTHOR%%/%BUILD_COMMIT_AUTHORS%/"^
+                       -e "s/%%BUILD_COMMIT_BRANCH%%/%BUILD_COMMIT_BRANCH%/"^
+                       "output\%%o.html"
     del sed.txt
     del "output\%%o.html.tmp"
   )

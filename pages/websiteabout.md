@@ -40,7 +40,7 @@ Note: Using a css only dark mode system without persistance between pages and li
 
 <a class="hideul" href="https://validator.w3.org/nu/?showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fprogrammingclub.com.au%2Ftestwebsite%2Fwebsiteabout.html">
   <img style="border:0;width:88px;height:31px"
-       src="https://raw.githubusercontent.com/bradleytaunt/html5-valid-badge/refs/heads/master/html5-validator-badge.png"
+       src="https://raw.githubusercontent.com/bradleytaunt/html5-valid-badge/68b012b/html5-validator-badge.png"
        alt="Valid HTML5!">
 </a>
 <a class="hideul" href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fprogrammingclub.com.au%2Ftestwebsite%2Fassets%2Fstyle.css&usermedium=all&vextwarning=true&warning=2">
