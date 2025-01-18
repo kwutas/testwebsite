@@ -10,49 +10,49 @@ If anyone has any questions for the Club, please send us a message via either Di
 
 <!-- TODO: Add photos -->
 <!-- TODO: Add office descriptions -->
-## Committee
+### Committee
 The Club's affairs are managed by the Committee.
 
-If you wish to contact a committee member via Discord, please do it via our server unless they give permission to do so privately. We would prefer if sensitive matters were handled via email.  
+If you wish to contact a committee member via Discord, please do it via our server unless they give permission to do so privately. We would prefer if sensitive matters were handled via email.
+
 For the 2024-2025 Club year, the Committee is made up by the following people (preferred names, if any, are in brackets):
 
-### President
+#### President
 **Officeholder:** Kentaro Watts  
-Email: [president@programmingclub.com.au](mailto: president@programmingclub.com.au)  
+Email: <president@programmingclub.com.au>  
 Discord Account:  Kentaro Watts(sutherwin)
 
-### Treasurer
+#### Treasurer
 **Officeholder**: Lachlan McKay  
-Email: [treasurer@programmingclub.com.au](mailto: treasurer@programmingclub.com.au)  
+Email: <treasurer@programmingclub.com.au>  
 Discord Account: Lachlan McKay(emiko_nanami)
 
-### Secretary
+#### Secretary
 **Officeholder**: Cameron Munro  
-Email: [secretary@programmingclub.com.au](mailto: secretary@programmingclub.com.au)  
+Email: <secretary@programmingclub.com.au>  
 Discord Account: Cam(camtas)
 
-### Southern Technical Support Officer
+#### Southern Technical Support Officer
 **Officeholder**: Joshua Wierenga  
-Email: [tech@programmingclub.com.au](mailto: tech@programmingclub.com.au), this is subject to change  
+Email: <tech@programmingclub.com.au>, this is subject to change  
 Discord Account: Joshua(somethingsensible)
 
-### Marketing Officer
+#### Marketing Officer
 **Officeholder**: Charles (Kat) Carolan  
-Email: [marketing@programmingclub.com.au](mailto: marketing@programmingclub.com.au)  
+Email: <marketing@programmingclub.com.au>  
 Discord Account: -
 
-### Northern Technical Support Officer
+#### Northern Technical Support Officer
 **Officeholder**: Michael Dacey  
-Email: Currently does not have a dedicated email, please just use [contact@programmingclub.com.au](mailto: contact@programmingclub.com.au) for the now  
+Email: Currently does not have a dedicated email, please just use <contact@programmingclub.com.au> for the now  
 Discord Account: -
 
-### General Members
+#### General Members
 * Tran (Luke), Hau Duc
 * Oliver Kulinski
 
-### Unfilled positions
-In addition to the positions listed above, we also have some that are currently unfilled:
-
+#### Unfilled positions
+<p class="mb-0">In addition to the positions listed above, we also have some that are currently unfilled:</p>
 * Northern and Southern Education Officers
 * Northern and Southern Events Officers
 * Northern Marketing Officer
@@ -60,7 +60,7 @@ In addition to the positions listed above, we also have some that are currently 
 
 Members are encouraged to contact us if they are at all interested in running for these positions as we would love some assistance.
 
-## Constitution
+### Constitution
 <!-- TODO: Add constitution -->
 The Club is governed by a constitution. <!-- You can access it here. -->
 
