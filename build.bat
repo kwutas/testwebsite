@@ -1,7 +1,7 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
 
-:: TODO: Get timestamps for build and commit time working, is it even possible on Windows with provided tools?
+:: TODO: Get timestamp for commit time working, is it even possible on Windows with provided tools?
 
 SET "FILEMISSING="
 IF NOT EXIST bin\pandoc.exe SET "FILEMISSING=1"
@@ -21,6 +21,20 @@ SET "PAGES=index projects events about websiteabout"
 
 FOR /F %%F IN ('bin\pandoc.exe -v ^| bin\sed.exe -n "s/^pandoc.exe //p"') DO SET "PANDOC_VERSION=%%F"
 FOR /F %%F IN ('bin\magick.exe --version ^| bin\sed.exe -n "s/^Version: ImageMagick \([[:digit:]]\{1,\}\.[[:digit:]]\{1,\}\.[[:digit:]]\{1,\}-[[:digit:]]\{1,\}\).*/\1/p"') DO SET "MAGICK_VERSION=%%F"
+
+:: Based on https://stackoverflow.com/a/203116 and https://stackoverflow.com/a/43146279
+FOR /f "tokens=2-4 delims=/ " %%A IN ("%DATE%") DO (SET "BUILD_TIME=%%C-%%B-%%AT")
+FOR /f "tokens=1-3 delims=/:." %%A IN ("%TIME%") DO (SET "BUILD_TIME=%BUILD_TIME%%%A:%%B:%%C")
+FOR /F "tokens=3" %%F IN ('reg query HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v ActiveTimeBias') DO SET /A "SBIAS=%%F"
+IF "%SBIAS:~0,1%"=="-" (SET "SIGN=+" & SET "UBIAS=%SBIAS:~1%") ELSE SET "SIGN=-" & SET "UBIAS=%SBIAS%"
+SET /A "DEC=100*%UBIAS%/60"
+SET /A "HOURS=%DEC%/100"
+IF "%DEC%"=="0" SET "MINS=00" & SET "SIGN=+"
+IF "%DEC:~1%"=="00" (SET "MINS=00") ELSE IF "%DEC:~2%"=="00" SET "MINS=00" && SET "HOURS=%DEC:~0,2%"
+IF "%DEC:~1%"=="50" (SET "MINS=30") ELSE IF "%DEC:~2%"=="50" SET "MINS=30" && SET "HOURS=%DEC:~0,2%"
+IF "%DEC:~1%"=="75" (SET "MINS=45") ELSE IF "%DEC:~2%"=="75" SET "MINS=45" && SET "HOURS=%DEC:~0,2%"
+IF %HOURS% LSS 10 SET "HOURS=0%HOURS%"
+SET "BUILD_TIME=%BUILD_TIME%%SIGN%%HOURS%:%MINS%"
 
 FOR /F %%F IN ('git show -s --format^=%%H') DO SET "BUILD_COMMIT=%%F"
 FOR /F "tokens=*" %%F IN ('git show -s --format^=%%an') DO SET "BUILD_COMMIT_AUTHORS=%%F"
@@ -72,7 +86,7 @@ IF NOT EXIST output\assets\ MKDIR output\assets\
     :: TODO: Figure out how to make sed.exe accept input directly
     ECHO s$%%NAVBAR_ITEMS%%$!navbar!$> sed.txt
     bin\sed.exe -i.tmp -f sed.txt -e "s/%%PANDOC_VERSION%%/%PANDOC_VERSION%/"^
-                       -e "s/%%MAGICK_VERSION%%/%MAGICK_VERSION%/"^
+                       -e "s/%%MAGICK_VERSION%%/%MAGICK_VERSION%/" -e "s/%%BUILD_TIME%%/%BUILD_TIME%/"^
                        -e "s/%%BUILD_COMMIT%%/%BUILD_COMMIT%/" -e "s/%%BUILD_COMMIT_AUTHOR%%/%BUILD_COMMIT_AUTHORS%/"^
                        -e "s/%%BUILD_COMMIT_BRANCH%%/%BUILD_COMMIT_BRANCH%/"^
                        "output\%%o.html"
