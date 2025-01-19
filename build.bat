@@ -96,6 +96,14 @@ IF NOT EXIST output\assets\ MKDIR output\assets\
 ))
 
 COPY assets\style.css output\assets\style.css
+COPY assets\"Programming Club Constitution.pdf" output\assets\"Programming Club Constitution.pdf"
 
-bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -resize 32x32 -density 32x32 output\assets\favicon.ico
-bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -resize 250x253 -density 250x253 output\assets\icon.png
+bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -resize 48x48 -density 48x48 output\assets\favicon.ico
+bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.avif
+bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.png
+bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.webp
+FOR /R %%F IN ("assets\Committee*.jpg") DO (
+  bin\magick.exe "%%F" -strip -background none -resize 200x200 -density 200x200 "output\assets\%%~nF.avif"
+  bin\magick.exe "%%F" -strip -background none -resize 200x200 -density 200x200 "output\assets\%%~nF.jpg"
+  bin\magick.exe "%%F" -strip -background none -resize 200x200 -density 200x200 "output\assets\%%~nF.webp"
+)

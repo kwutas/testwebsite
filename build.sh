@@ -82,5 +82,13 @@ cp assets/style.css output/assets/style.css
 cp assets/"Programming Club Constitution.pdf" output/assets/"Programming Club Constitution.pdf"
 
 # TODO: Make these optional as they are quite slow
-bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 32x32 -density 32x32 output/assets/favicon.ico
-bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 250x253 -density 250x253 output/assets/icon.png
+bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 48x48 -density 48x48 output/assets/favicon.ico
+bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.avif
+bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.png
+bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.webp
+for image in assets/Committee*.jpg; do
+  NAME=$(basename "$image" .jpg)
+  bin/magick "$image" -strip -background none -resize 200x200 -density 200x200 "output/assets/$NAME.avif"
+  bin/magick "$image" -strip -background none -resize 200x200 -density 200x200 "output/assets/$NAME.jpg"
+  bin/magick "$image" -strip -background none -resize 200x200 -density 200x200 "output/assets/$NAME.webp"
+done

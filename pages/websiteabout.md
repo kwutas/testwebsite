@@ -11,7 +11,8 @@ Implemented by Joshua Wierenga and Kentaro Watts.
 Built using [Pandoc](https://pandoc.org/)'s Markdown to HTML converter as a static site generator with images prepared with [ImageMagick](https://imagemagick.org/).  
 This website relies on [Bootstrap 5](https://getbootstrap.com/), licensed under [MIT](https://github.com/twbs/bootstrap/blob/v5.3.3/LICENSE) 
 and various icons from [Bootstrap Icons](https://icons.getbootstrap.com/), also licensed under [MIT](https://github.com/twbs/icons/blob/v1.11.3/LICENSE).  
-Special thanks to Nathaniel for their css only dark mode toggle [code](https://endtimes.dev/no-javascript-dark-mode-toggle/).
+Special thanks to Nathaniel for their css only dark mode toggle [code](https://endtimes.dev/no-javascript-dark-mode-toggle/).  
+Using [this placeholder image](https://commons.wikimedia.org/wiki/File:No-Image-Placeholder.svg) by Ranjithsiji under CC-BY-SA-4.0.
 
 Website info:
 
