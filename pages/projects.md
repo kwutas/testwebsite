@@ -20,7 +20,8 @@ A key focus of this project is having it be compatible with a wide variety of un
 We started in C for it's near universal adoption on both new and old devices going back decades, but it turns out that Haxe fits this niche even better as it can be converted into a number of other languages including C++, JavaScript and Python making it easy to use almost anywhere.
 Once the rewrite is done, we have plans to develop a map editor and possibly make use on other Tassie made projects like [Yarn Spinner](https://www.yarnspinner.dev/) for narrative and progression management since a partial [Haxe port](https://github.com/cxsquared/hxyarn) already exists.
 
-<p class="mb-0">Links:</p>
+[Links:]{class="list-heading"}
+
  * [Original game's source code](https://github.com/UTAS-Programming-Club/UntitledTextAdventure)
  * [Haxe rewrite's source code](https://github.com/UTAS-Programming-Club/UntitledTextAdventure/tree/haxe-rewrite)
  * [Some ideas and a partial development history](https://github.com/UTAS-Programming-Club/UntitledTextAdventure/wiki)
@@ -37,7 +38,8 @@ We have previously included partial support for hangman and classic DECtalk base
 If anyone is interested in these features and would like to help finish support for them, then please let us know.
 Recently, we used the bot to list scores from our private Advent of Code 2024 leaderboard to make it easy to compare scores with other members.
 
-<p class="mb-0">Links:</p>
+[Links:]{class="list-heading"}
+
  * [Our bot's source code](https://github.com/UTAS-Programming-Club/DiscordBot)
 
 ### Minecraft Mod/Server
@@ -47,7 +49,8 @@ Currently, our mod just adds explosion proof glass but we welcome suggestions fo
 
 If there is interest, we plan to get back into playing during the holidays before semester 1 starts.
 
-<p class="mb-0">Links:</p>
+[Links:]{class="list-heading"}
+
  * [Our mod's source code](https://github.com/UTAS-Programming-Club/HardenedGlass)
 
 ### This Website
@@ -60,6 +63,7 @@ Check out the info page with the button in the bottom right to see some more inf
 We have plans to add even more content, improve the integration with the text adventure and possibly add alternate themes.
 Let us know what you would like to see!
 
-<p class="mb-0">Links:</p>
+[Links:]{class="list-heading"}
+
  * [Our updated website's source code](https://github.com/UTAS-Programming-Club/testwebsite)
  * [Our legacy website's source code](https://github.com/UTAS-Programming-Club/UTAS-Programming-Club.github.io), while it still exists

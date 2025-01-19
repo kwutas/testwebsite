@@ -36,6 +36,10 @@ body, html {
   font-weight: bold;
 }
 
+p:has(> .list-heading) {
+  margin-bottom: 0;
+}
+
 .w3cvalid {
   border:0;
   width:88px;

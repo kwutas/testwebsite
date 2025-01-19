@@ -46,7 +46,8 @@ Email: Currently does not have a dedicated email, please just use <contact@progr
 * Oliver Kulinski
 
 #### Unfilled positions
-<p class="mb-0">In addition to the positions listed above, we also have some that are currently unfilled:</p>
+[In addition to the positions listed above, we also have some that are currently unfilled:]{class="list-heading"}
+
 * Northern and Southern Education Officers
 * Northern and Southern Events Officers
 * Northern Marketing Officer
