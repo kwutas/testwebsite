@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# TODO: Try to remove any html tags from markdown code
+# TODO: Add heading self anchors
+
 if [ ! -f bin/pandoc ] || [ ! -f bin/magick ]; then
   printf "Required binaries are missing, please run setup.sh to acquire them\n"
   exit 1
