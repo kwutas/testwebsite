@@ -79,6 +79,7 @@ for output_page in $PAGES; do
 done
 
 cp assets/style.css output/assets/style.css
+cp assets/"Programming Club Constitution.pdf" output/assets/"Programming Club Constitution.pdf"
 
 # TODO: Make these optional as they are quite slow
 bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 32x32 -density 32x32 output/assets/favicon.ico

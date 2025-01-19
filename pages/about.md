@@ -8,6 +8,8 @@ To focus our learning and efforts, the Club runs various projects which members 
 
 If anyone has any questions for the Club, please send us a message via either Discord or [Email](mailto: contact@programmingclub.com.au).
 
+![Club members in a large room with a big screen at weekly Friday meet-up](https://programmingclub.com.au/assets/photos/weekly_meetup_cropped.jpg "A weekly meetup at the Sandy Bay Campus"){class="img-fluid"}
+
 <!-- TODO: Add photos -->
 <!-- TODO: Add office descriptions -->
 ### Committee
@@ -56,7 +58,6 @@ Email: Currently does not have a dedicated email, please just use <contact@progr
 Members are encouraged to contact us if they are at all interested in running for these positions as we would love some assistance.
 
 ### Constitution
-<!-- TODO: Add constitution -->
-The Club is governed by a constitution. <!-- You can access it here. -->
-
-![Club members in a large room with a big screen at weekly Friday meet-up](https://programmingclub.com.au/assets/photos/weekly_meetup_cropped.jpg "A weekly meetup at the Sandy Bay Campus"){class="img-fluid"}
+The Club is governed by a constitution which is included below:  
+[Click for fullsize copy](assets/Programming Club Constitution.pdf)
+![Club Constitution PDF](assets/Programming Club Constitution.pdf){class="w-100 constitution"}
