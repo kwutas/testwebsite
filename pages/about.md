@@ -19,33 +19,27 @@ For the 2024-2025 Club year, the Committee is made up by the following people (p
 
 #### President
 **Officeholder:** Kentaro Watts  
-Email: <president@programmingclub.com.au>  
-Discord Account:  Kentaro Watts(sutherwin)
+Email: <president@programmingclub.com.au>
 
 #### Treasurer
 **Officeholder**: Lachlan McKay  
-Email: <treasurer@programmingclub.com.au>  
-Discord Account: Lachlan McKay(emiko_nanami)
+Email: <treasurer@programmingclub.com.au>
 
 #### Secretary
 **Officeholder**: Cameron Munro  
-Email: <secretary@programmingclub.com.au>  
-Discord Account: Cam(camtas)
+Email: <secretary@programmingclub.com.au>
 
 #### Southern Technical Support Officer
 **Officeholder**: Joshua Wierenga  
-Email: <tech@programmingclub.com.au>, this is subject to change  
-Discord Account: Joshua(somethingsensible)
+Email: <tech@programmingclub.com.au>, this is subject to change
 
 #### Marketing Officer
 **Officeholder**: Charles (Kat) Carolan  
-Email: <marketing@programmingclub.com.au>  
-Discord Account: -
+Email: <marketing@programmingclub.com.au>
 
 #### Northern Technical Support Officer
 **Officeholder**: Michael Dacey  
-Email: Currently does not have a dedicated email, please just use <contact@programmingclub.com.au> for the now  
-Discord Account: -
+Email: Currently does not have a dedicated email, please just use <contact@programmingclub.com.au> for the now
 
 #### General Members
 * Tran (Luke), Hau Duc
