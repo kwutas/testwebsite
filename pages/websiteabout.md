@@ -30,13 +30,12 @@ Website info:
 * Git commit time: %BUILD_COMMIT_TIME%
 * Git commit branch: %BUILD_COMMIT_BRANCH%
 
-<!-- TODO: Uncomment once js dark mode support is back -->
-<!-- <span class="js-only" hidden>
-Using a js based dark mode system with full persistance between pages and browser level support.
-</span> -->
-<!-- <noscript> -->
+<span class="js-only" hidden>
+None: Using a js based dark mode system with full persistance between pages and browser level support. Try without js to see the differences!
+</span>
+<noscript>
 Note: Using a css only dark mode system without persistance between pages and limited browser level suppport.
-<!-- </noscript> -->
+</noscript>
 
 [![Unoffical W3C valid HTML5 logo](https://raw.githubusercontent.com/bradleytaunt/html5-valid-badge/68b012b/html5-validator-badge.png "Valid HTML5!"){class="w3cvalid"}
 ](https://validator.w3.org/nu/?showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fprogrammingclub.com.au%2Ftestwebsite%2Fwebsiteabout.html)
