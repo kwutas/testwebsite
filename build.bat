@@ -95,6 +95,7 @@ IF NOT EXIST output\assets\ MKDIR output\assets\
   )
 ))
 
+COPY assets\script.js output\assets\script.js
 COPY assets\style.css output\assets\style.css
 COPY assets\"Programming Club Constitution.pdf" output\assets\"Programming Club Constitution.pdf"
 

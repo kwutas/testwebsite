@@ -78,6 +78,7 @@ for output_page in $PAGES; do
   rm "output/$output_page.html.tmp"
 done
 
+cp assets/script.js output/assets/script.js
 cp assets/style.css output/assets/style.css
 cp assets/"Programming Club Constitution.pdf" output/assets/"Programming Club Constitution.pdf"
 

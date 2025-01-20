@@ -11,6 +11,7 @@ If anyone has any questions for the Club, please send us a message via either Di
 ![Club members in a large room with a big screen at weekly Friday meet-up](https://programmingclub.com.au/assets/photos/weekly_meetup_cropped.jpg "A weekly meetup at the Sandy Bay Campus"){class="img-fluid"}
 
 <!-- TODO: Add office descriptions -->
+<!-- TODO: Remove spaces from all image paths -->
 ### Committee
 The Club's affairs are managed by the Committee.
 
