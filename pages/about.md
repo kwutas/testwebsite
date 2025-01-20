@@ -11,7 +11,6 @@ If anyone has any questions for the Club, please send us a message via either Di
 ![Club members in a large room with a big screen at weekly Friday meet-up](https://programmingclub.com.au/assets/photos/weekly_meetup_cropped.jpg "A weekly meetup at the Sandy Bay Campus"){class="img-fluid"}
 
 <!-- TODO: Add office descriptions -->
-<!-- TODO: Remove spaces from all image paths -->
 ### Committee
 The Club's affairs are managed by the Committee.
 
@@ -23,9 +22,9 @@ For the 2024-2025 Club year, the Committee is made up by the following people (p
 **Officeholder:** Kentaro Watts  
 Email: <president@programmingclub.com.au>  
 <picture>
-  <source srcset="assets/Committee Kentaro.avif" type="image/avif">
-  <source srcset="assets/Committee Kentaro.webp" type="image/webp">
-  <img height="200" src="assets/Committee Kentaro.jpg" alt="Portrait of Kentaro Watts">
+  <source srcset="assets/Committee%20Kentaro.avif" type="image/avif">
+  <source srcset="assets/Committee%20Kentaro.webp" type="image/webp">
+  <img height="200" src="assets/Committee%20Kentaro.jpg" alt="Portrait of Kentaro Watts">
 </picture>
 
 <!-- TODO: Add existing photo of Lachlan -->
@@ -38,27 +37,27 @@ Email: <treasurer@programmingclub.com.au>
 **Officeholder**: Cameron Munro  
 Email: <secretary@programmingclub.com.au>  
 <picture>
-  <source srcset="assets/Committee Cameron.avif" type="image/avif">
-  <source srcset="assets/Committee Cameron.webp" type="image/webp">
-  <img height="200" src="assets/Committee Cameron.jpg" alt="Portrait of Cameron Munro">
+  <source srcset="assets/Committee%20Cameron.avif" type="image/avif">
+  <source srcset="assets/Committee%20Cameron.webp" type="image/webp">
+  <img height="200" src="assets/Committee%20Cameron.jpg" alt="Portrait of Cameron Munro">
 </picture>
 
 #### Southern Technical Support Officer
 **Officeholder**: Joshua Wierenga  
 Email: <tech@programmingclub.com.au>, this is subject to change  
 <picture>
-  <source srcset="assets/Committee Joshua.avif" type="image/avif">
-  <source srcset="assets/Committee Joshua.webp" type="image/webp">
-  <img height="200" src="assets/Committee Joshua.jpg" alt="Portrait of Joshua Wierenga">
+  <source srcset="assets/Committee%20Joshua.avif" type="image/avif">
+  <source srcset="assets/Committee%20Joshua.webp" type="image/webp">
+  <img height="200" src="assets/Committee%20Joshua.jpg" alt="Portrait of Joshua Wierenga">
 </picture>
 
 #### Marketing Officer
 **Officeholder**: Kat Carolan  
 Email: <marketing@programmingclub.com.au>  
 <picture>
-  <source srcset="assets/Committee Kentaro.avif" type="image/avif">
-  <source srcset="assets/Committee Kentaro.webp" type="image/webp">
-  <img height="200" src="assets/Committee Kat.jpg" alt="Portrait of Kat Carolan">
+  <source srcset="assets/Committee%20Kentaro.avif" type="image/avif">
+  <source srcset="assets/Committee%20Kentaro.webp" type="image/webp">
+  <img height="200" src="assets/Committee%20Kat.jpg" alt="Portrait of Kat Carolan">
 </picture>
 
 <!-- TODO: Get photo of Michael -->
