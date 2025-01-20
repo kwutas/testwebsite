@@ -30,9 +30,7 @@ Website info:
 * Git commit time: %BUILD_COMMIT_TIME%
 * Git commit branch: %BUILD_COMMIT_BRANCH%
 
-<span class="js-only" hidden>
-None: Using a js based dark mode system with full persistance between pages and browser level support. Try without js to see the differences!
-</span>
+[None: Using a js based dark mode system with full persistance between pages and browser level support. Try without js to see the differences!]{class="js-only" hidden="hidden"}
 <noscript>
 Note: Using a css only dark mode system without persistance between pages and limited browser level suppport.
 </noscript>
