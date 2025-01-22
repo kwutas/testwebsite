@@ -70,7 +70,7 @@ for output_page in $PAGES; do
   bin/pandoc templates/setup.yaml -s --template templates/template.html -f markdown-implicit_figures\
              --wrap=preserve -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
              -o "output/$output_page.html"
-  sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`" -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
+  sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`" -e 's# />#>#' -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
              -e "s/%MAGICK_VERSION%/$MAGICK_VERSION/" -e "s/%BUILD_TIME%/$BUILD_TIME/"\
              -e "s/%BUILD_COMMIT%/$BUILD_COMMIT/" -e "s/%BUILD_COMMIT_AUTHOR%/$BUILD_COMMIT_AUTHORS/"\
              -e "s/%BUILD_COMMIT_TIME%/$BUILD_COMMIT_TIME/" -e "s/%BUILD_COMMIT_BRANCH%/$BUILD_COMMIT_BRANCH/"\
@@ -89,7 +89,7 @@ bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -
 bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.webp
 for image in assets/Committee*.jpg; do
   NAME=$(basename "$image" .jpg)
-  bin/magick "$image" -strip -background none -resize 200x200 -density 200x200 "output/assets/$NAME.avif"
-  bin/magick "$image" -strip -background none -resize 200x200 -density 200x200 "output/assets/$NAME.jpg"
-  bin/magick "$image" -strip -background none -resize 200x200 -density 200x200 "output/assets/$NAME.webp"
+  bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.avif"
+  bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.jpg"
+  bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.webp"
 done

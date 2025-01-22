@@ -85,7 +85,7 @@ IF NOT EXIST output\assets\ MKDIR output\assets\
                    -o "output\%%o.html"
     :: TODO: Figure out how to make sed.exe accept input directly
     ECHO s$%%NAVBAR_ITEMS%%$!navbar!$> sed.txt
-    bin\sed.exe -i.tmp -f sed.txt -e "s/%%PANDOC_VERSION%%/%PANDOC_VERSION%/"^
+    bin\sed.exe -i.tmp -f sed.txt -e 's# />#>#' -e "s/%%PANDOC_VERSION%%/%PANDOC_VERSION%/"^
                        -e "s/%%MAGICK_VERSION%%/%MAGICK_VERSION%/" -e "s/%%BUILD_TIME%%/%BUILD_TIME%/"^
                        -e "s/%%BUILD_COMMIT%%/%BUILD_COMMIT%/" -e "s/%%BUILD_COMMIT_AUTHOR%%/%BUILD_COMMIT_AUTHORS%/"^
                        -e "s/%%BUILD_COMMIT_BRANCH%%/%BUILD_COMMIT_BRANCH%/"^

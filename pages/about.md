@@ -24,7 +24,7 @@ Email: <president@programmingclub.com.au>
 <picture>
   <source srcset="assets/Committee%20Kentaro.avif" type="image/avif">
   <source srcset="assets/Committee%20Kentaro.webp" type="image/webp">
-  <img height="200" src="assets/Committee%20Kentaro.jpg" alt="Portrait of Kentaro Watts">
+  ![Portrait of Kentaro Watts](assets/Committee%20Kentaro.jpg){height="200"}
 </picture>
 
 <!-- TODO: Add existing photo of Lachlan -->
@@ -32,7 +32,11 @@ Email: <president@programmingclub.com.au>
  The Treasurer is responsible for overseeing the Club's financial activities, keeping accurate records of funds and assets, and preparing and presenting budgets for new or ongoing projects.  
 **Officeholder**: Lachlan McKay  
 Email: <treasurer@programmingclub.com.au>  
-<img height="200" src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt="Placeholder image for portrait">
+<picture>
+  <source srcset="assets/Committee%20Lachlan.avif" type="image/avif">
+  <source srcset="assets/Committee%20Lachlan.webp" type="image/webp">
+  ![Portrait of Lachlan McKay](assets/Committee%20Lachlan.jpg){height="200"}
+</picture>
 
 #### Secretary
 The Secretary ensures meetings are effectively organised and minuted, maintains effective membership records, and documents the Club's communication and correspondence.  
@@ -41,7 +45,7 @@ Email: <secretary@programmingclub.com.au>
 <picture>
   <source srcset="assets/Committee%20Cameron.avif" type="image/avif">
   <source srcset="assets/Committee%20Cameron.webp" type="image/webp">
-  <img height="200" src="assets/Committee%20Cameron.jpg" alt="Portrait of Cameron Munro">
+  ![Portrait of Cameron Munro](assets/Committee%20Cameron.jpg){height="200"}
 </picture>
 
 #### Southern Technical Support Officer
@@ -51,7 +55,7 @@ Email: <tech@programmingclub.com.au>, this is subject to change
 <picture>
   <source srcset="assets/Committee%20Joshua.avif" type="image/avif">
   <source srcset="assets/Committee%20Joshua.webp" type="image/webp">
-  <img height="200" src="assets/Committee%20Joshua.jpg" alt="Portrait of Joshua Wierenga">
+  ![Portrait of Joshua Wierenga](assets/Committee%20Joshua.jpg){height="200"}
 </picture>
 
 #### Marketing Officer
@@ -61,7 +65,7 @@ Email: <marketing@programmingclub.com.au>
 <picture>
   <source srcset="assets/Committee%20Kat.avif" type="image/avif">
   <source srcset="assets/Committee%20Kat.webp" type="image/webp">
-  <img height="200" src="assets/Committee%20Kat.jpg" alt="Portrait of Kat Carolan">
+  ![Portrait of Kat Carolan](assets/Committee%20Kat.jpg){height="200"}
 </picture>
 
 <!-- TODO: Get photo of Michael -->
