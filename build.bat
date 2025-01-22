@@ -103,8 +103,28 @@ IF NOT EXIST output\assets\favicon.ico bin\magick.exe assets\DraftPCLogoV2.png -
 IF NOT EXIST output\assets\icon.avif   bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.avif
 IF NOT EXIST output\assets\icon.png    bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.png
 IF NOT EXIST output\assets\icon.webp   bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.webp
+
 FOR /R %%F IN ("assets\Committee*.jpg") DO (
   IF NOT EXIST "output\assets\%%~nF.avif" bin\magick.exe "%%F" -strip -background none -resize 250x250 -density 250x250 "output\assets\%%~nF.avif"
   IF NOT EXIST "output\assets\%%~nF.jpg"  bin\magick.exe "%%F" -strip -background none -resize 250x250 -density 250x250 "output\assets\%%~nF.jpg"
   IF NOT EXIST "output\assets\%%~nF.webp" bin\magick.exe "%%F" -strip -background none -resize 250x250 -density 250x250 "output\assets\%%~nF.webp"
 )
+
+FOR /R %%F IN ("assets\discord-*.png") DO (
+  IF NOT EXIST "output\assets\%%~nF.avif" bin\magick.exe "%%F" -strip -background none -compress lossless "output\assets\%%~nF.avif"
+  IF NOT EXIST "output\assets\%%~nF.png"  bin\magick.exe "%%F" -strip -background none -compress lossless "output\assets\%%~nF.png"
+  IF NOT EXIST "output\assets\%%~nF.webp" bin\magick.exe "%%F" -strip -background none -compress lossless "output\assets\%%~nF.webp"
+)
+
+IF NOT EXIST output/assets/minecraft-1.avif bin\magick.exe assets\minecraft-1.png -strip -background none -resize 1024x576 -density 1024x576 output\assets\minecraft-1.avif
+IF NOT EXIST output/assets/minecraft-1.png  bin\magick.exe assets\minecraft-1.png -strip -background none -resize 1024x576 -density 1024x576 output\assets\minecraft-1.png
+IF NOT EXIST output/assets/minecraft-1.webp bin\magick.exe assets\minecraft-1.png -strip -background none -resize 1024x576 -density 1024x576 output\assets\minecraft-1.webp
+IF NOT EXIST output/assets/minecraft-2.avif bin\magick.exe assets\minecraft-2.png -strip -background none -resize 1024x576 -density 1024x576 output\assets\minecraft-2.avif
+IF NOT EXIST output/assets/minecraft-2.png  bin\magick.exe assets\minecraft-2.png -strip -background none -resize 1024x576 -density 1024x576 output\assets\minecraft-2.png
+IF NOT EXIST output/assets/minecraft-2.webp bin\magick.exe assets\minecraft-2.png -strip -background none -resize 1024x576 -density 1024x576 output\assets\minecraft-2.webp
+IF NOT EXIST output/assets/minecraft-3.avif bin\magick.exe assets\minecraft-3.png -strip -background none -resize  521x576 -density  521x576 output\assets\minecraft-3.avif
+IF NOT EXIST output/assets/minecraft-3.png  bin\magick.exe assets\minecraft-3.png -strip -background none -resize  521x576 -density  521x576 output\assets\minecraft-3.png
+IF NOT EXIST output/assets/minecraft-3.webp bin\magick.exe assets\minecraft-3.png -strip -background none -resize  521x576 -density  521x576 output\assets\minecraft-3.webp
+IF NOT EXIST output/assets/minecraft-4.avif bin\magick.exe assets\minecraft-4.png -strip -background none -resize 1024x576 -density 1024x405 output\assets\minecraft-4.avif
+IF NOT EXIST output/assets/minecraft-4.png  bin\magick.exe assets\minecraft-4.png -strip -background none -resize 1024x576 -density 1024x405 output\assets\minecraft-4.png
+IF NOT EXIST output/assets/minecraft-4.webp bin\magick.exe assets\minecraft-4.png -strip -background none -resize 1024x576 -density 1024x405 output\assets\minecraft-4.webp

@@ -86,9 +86,30 @@ cp assets/"Programming Club Constitution.pdf" output/assets/"Programming Club Co
 [ -f output/assets/icon.avif ]   || bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.avif
 [ -f output/assets/icon.png ]    || bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.png
 [ -f output/assets/icon.webp ]   || bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.webp
+
 for image in assets/Committee*.jpg; do
   NAME=$(basename "$image" .jpg)
   [ -f "output/assets/$NAME.avif" ] || bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.avif"
   [ -f "output/assets/$NAME.jpg" ]  || bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.jpg"
   [ -f "output/assets/$NAME.webp" ] || bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.webp"
 done
+
+for image in assets/discord-*.png; do
+  NAME=$(basename "$image" .png)
+  [ -f "output/assets/$NAME.avif" ] || bin/magick "$image" -strip -background none -compress lossless "output/assets/$NAME.avif"
+  [ -f "output/assets/$NAME.png" ]  || bin/magick "$image" -strip -background none -compress lossless "output/assets/$NAME.png"
+  [ -f "output/assets/$NAME.webp" ] || bin/magick "$image" -strip -background none -compress lossless "output/assets/$NAME.webp"
+done
+
+[ -f output/assets/minecraft-1.avif ] || bin/magick assets/minecraft-1.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-1.avif
+[ -f output/assets/minecraft-1.png ]  || bin/magick assets/minecraft-1.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-1.png
+[ -f output/assets/minecraft-1.webp ] || bin/magick assets/minecraft-1.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-1.webp
+[ -f output/assets/minecraft-2.avif ] || bin/magick assets/minecraft-2.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-2.avif
+[ -f output/assets/minecraft-2.png ]  || bin/magick assets/minecraft-2.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-2.png
+[ -f output/assets/minecraft-2.webp ] || bin/magick assets/minecraft-2.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-2.webp
+[ -f output/assets/minecraft-3.avif ] || bin/magick assets/minecraft-3.png -strip -background none -resize  521x576 -density  521x576 output/assets/minecraft-3.avif
+[ -f output/assets/minecraft-3.png ]  || bin/magick assets/minecraft-3.png -strip -background none -resize  521x576 -density  521x576 output/assets/minecraft-3.png
+[ -f output/assets/minecraft-3.webp ] || bin/magick assets/minecraft-3.png -strip -background none -resize  521x576 -density  521x576 output/assets/minecraft-3.webp
+[ -f output/assets/minecraft-4.avif ] || bin/magick assets/minecraft-4.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-4.avif
+[ -f output/assets/minecraft-4.png ]  || bin/magick assets/minecraft-4.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-4.png
+[ -f output/assets/minecraft-4.webp ] || bin/magick assets/minecraft-4.png -strip -background none -resize 1024x576 -density 1024x576 output/assets/minecraft-4.webp
