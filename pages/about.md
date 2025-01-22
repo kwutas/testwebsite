@@ -8,7 +8,7 @@ To focus our learning and efforts, the Club runs various projects which members 
 
 If anyone has any questions for the Club, please send us a message via either Discord or [Email](mailto: contact@programmingclub.com.au).
 
-![Club members in a large room with a big screen at weekly Friday meet-up](https://programmingclub.com.au/assets/photos/weekly_meetup_cropped.jpg "A weekly meetup at the Sandy Bay Campus"){class="img-fluid"}
+![Club members in a large room with a big screen at a weekly meetup](https://programmingclub.com.au/assets/photos/weekly_meetup_cropped.jpg "A weekly meetup at the Sandy Bay Campus"){class="img-fluid"}
 
 ### Committee
 The Club's affairs are managed by the Committee.
@@ -93,5 +93,5 @@ Members are encouraged to contact us if they are at all interested in running fo
 
 ### Constitution
 The Club is governed by a constitution which is included below:  
-[Click for fullsize copy](assets/Programming Club Constitution.pdf)
-![Club Constitution PDF](assets/Programming Club Constitution.pdf){class="w-100 constitution"}
+[Link to fullsize copy](assets/Programming Club Constitution.pdf)
+![Club Constitution PDF](assets/Programming Club Constitution.pdf){class="w-100 constitution" type="application/pdf"}
