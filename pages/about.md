@@ -27,7 +27,6 @@ Email: <president@programmingclub.com.au>
   ![Portrait of Kentaro Watts](assets/Committee%20Kentaro.jpg){height="200"}
 </picture>
 
-<!-- TODO: Add existing photo of Lachlan -->
 #### Treasurer
  The Treasurer is responsible for overseeing the Club's financial activities, keeping accurate records of funds and assets, and preparing and presenting budgets for new or ongoing projects.  
 **Officeholder**: Lachlan McKay  

@@ -82,14 +82,13 @@ cp assets/script.js output/assets/script.js
 cp assets/style.css output/assets/style.css
 cp assets/"Programming Club Constitution.pdf" output/assets/"Programming Club Constitution.pdf"
 
-# TODO: Make these optional as they are quite slow
-bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 48x48 -density 48x48 output/assets/favicon.ico
-bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.avif
-bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.png
-bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.webp
+[ -f output/assets/favicon.ico ] || bin/magick assets/DraftPCLogoV2.png -strip -background none -resize 48x48 -density 48x48 output/assets/favicon.ico
+[ -f output/assets/icon.avif ]   || bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.avif
+[ -f output/assets/icon.png ]    || bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.png
+[ -f output/assets/icon.webp ]   || bin/magick assets/DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output/assets/icon.webp
 for image in assets/Committee*.jpg; do
   NAME=$(basename "$image" .jpg)
-  bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.avif"
-  bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.jpg"
-  bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.webp"
+  [ -f "output/assets/$NAME.avif" ] || bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.avif"
+  [ -f "output/assets/$NAME.jpg" ]  || bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.jpg"
+  [ -f "output/assets/$NAME.webp" ] || bin/magick "$image" -strip -background none -resize 250x250 -density 250x250 "output/assets/$NAME.webp"
 done

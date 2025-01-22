@@ -99,12 +99,12 @@ COPY assets\script.js output\assets\script.js
 COPY assets\style.css output\assets\style.css
 COPY assets\"Programming Club Constitution.pdf" output\assets\"Programming Club Constitution.pdf"
 
-bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -resize 48x48 -density 48x48 output\assets\favicon.ico
-bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.avif
-bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.png
-bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.webp
+IF NOT EXIST output\assets\favicon.ico bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -resize 48x48 -density 48x48 output\assets\favicon.ico
+IF NOT EXIST output\assets\icon.avif   bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.avif
+IF NOT EXIST output\assets\icon.png    bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.png
+IF NOT EXIST output\assets\icon.webp   bin\magick.exe assets\DraftPCLogoV2.png -strip -background none -compress lossless -resize 250x253 -density 250x253 output\assets\icon.webp
 FOR /R %%F IN ("assets\Committee*.jpg") DO (
-  bin\magick.exe "%%F" -strip -background none -resize 200x200 -density 200x200 "output\assets\%%~nF.avif"
-  bin\magick.exe "%%F" -strip -background none -resize 200x200 -density 200x200 "output\assets\%%~nF.jpg"
-  bin\magick.exe "%%F" -strip -background none -resize 200x200 -density 200x200 "output\assets\%%~nF.webp"
+  IF NOT EXIST "output\assets\%%~nF.avif" bin\magick.exe "%%F" -strip -background none -resize 250x250 -density 250x250 "output\assets\%%~nF.avif"
+  IF NOT EXIST "output\assets\%%~nF.jpg"  bin\magick.exe "%%F" -strip -background none -resize 250x250 -density 250x250 "output\assets\%%~nF.jpg"
+  IF NOT EXIST "output\assets\%%~nF.webp" bin\magick.exe "%%F" -strip -background none -resize 250x250 -density 250x250 "output\assets\%%~nF.webp"
 )
