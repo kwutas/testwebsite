@@ -45,6 +45,12 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   UpdateNavItems(event.matches);
 });
 
+addEventListener("popstate", (event) => {
+  const dark = new URLSearchParams(location.search).get("mode") == "dark";
+  UpdateMode(dark);
+  UpdateNavItems(dark);
+});
+
 function ToggleDarkMode() {
   const dark = new URLSearchParams(location.search).get("mode") == "dark";
   // TODO: Fix this being flipped
