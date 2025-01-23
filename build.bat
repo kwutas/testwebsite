@@ -89,6 +89,7 @@ IF NOT EXIST output\assets\ MKDIR output\assets\
                        -e "s/%%MAGICK_VERSION%%/%MAGICK_VERSION%/" -e "s/%%BUILD_TIME%%/%BUILD_TIME%/"^
                        -e "s/%%BUILD_COMMIT%%/%BUILD_COMMIT%/" -e "s/%%BUILD_COMMIT_AUTHOR%%/%BUILD_COMMIT_AUTHORS%/"^
                        -e "s/%%BUILD_COMMIT_BRANCH%%/%BUILD_COMMIT_BRANCH%/"^
+                       -e 's#^<h\([123456]\)\(.*\)id="\([^"]*\)"\(.*\)#<h\1 class="d-inline-block"\2id="\3"\4<a class="btn btn-link mb-2" href="\#\3"><svg class="bi heading-anchor-icon"><title>Link icon</title></svg></a>#'^
                        "output\%%o.html"
     del sed.txt
     del "output\%%o.html.tmp"

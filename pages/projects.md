@@ -22,7 +22,7 @@ Once the rewrite is done, we have plans to develop a map editor and possibly mak
 
 [Toggle game example screens](#textAdventureExamples){role="button" data-bs-toggle="collapse" data-bs-target="#textAdventureExamples" aria-expanded="true" aria-controls="textAdventureExamples"}
 
-::: {id="textAdventureExamples" class="carousel slide multi-collapse show mt-3"}
+::: {id="textAdventureExamples" class="carousel slide multi-collapse show"}
 :::: carousel-indicators
 <button type="button" data-bs-target="#textAdventureExamples" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 <button type="button" data-bs-target="#textAdventureExamples" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -141,7 +141,7 @@ Recently, we used the bot to list scores from our private Advent of Code 2024 le
 
 [Toggle bot example commands](#discordBotExamples){role="button" data-bs-toggle="collapse" data-bs-target="#discordBotExamples" aria-expanded="true" aria-controls="discordBotExamples"}
 
-::: {id="discordBotExamples" class="carousel slide multi-collapse show mt-3"}
+::: {id="discordBotExamples" class="carousel slide multi-collapse show"}
 :::: carousel-indicators
 <button type="button" data-bs-target="#discordBotExamples" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 <button type="button" data-bs-target="#discordBotExamples" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -193,7 +193,7 @@ If there is interest, we plan to get back into playing during the holidays befor
 
 [Toggle server example screenshots](#minecraftExamples){role="button" data-bs-toggle="collapse" data-bs-target="#minecraftExamples" aria-expanded="true" aria-controls="minecraftExamples"}
 
-::: {id="minecraftExamples" class="carousel slide multi-collapse show mt-3"}
+::: {id="minecraftExamples" class="carousel slide multi-collapse show"}
 :::: carousel-indicators
 <button type="button" data-bs-target="#minecraftExamples" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 <button type="button" data-bs-target="#minecraftExamples" data-bs-slide-to="1" aria-label="Slide 2"></button>
