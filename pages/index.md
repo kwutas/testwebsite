@@ -16,5 +16,4 @@ With a Programming Club membership, you will be invited to attend our weekly mee
 
 Sign up through our Rubric page today.
 
-<!-- TODO Avoid this header getting a anchor -->
 ### You dream it; we can help you build it{class="text-center"}

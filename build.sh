@@ -70,13 +70,11 @@ for output_page in $PAGES; do
   bin/pandoc templates/setup.yaml -s --template templates/template.html -f markdown-implicit_figures\
              --wrap=preserve -B templates/header.html -A templates/footer.html "pages/$output_page.md"\
              -o "output/$output_page.html"
-  # TODO: Avoid header anchors from pushing the rest of the page further down
-  # TODO: Shrink header anchor focus ring to just cover the icon
   sed -i.tmp -e "s\`%NAVBAR_ITEMS%\`$navbar\`" -e 's# />#>#' -e "s/%PANDOC_VERSION%/$PANDOC_VERSION/"\
              -e "s/%MAGICK_VERSION%/$MAGICK_VERSION/" -e "s/%BUILD_TIME%/$BUILD_TIME/"\
              -e "s/%BUILD_COMMIT%/$BUILD_COMMIT/" -e "s/%BUILD_COMMIT_AUTHOR%/$BUILD_COMMIT_AUTHORS/"\
              -e "s/%BUILD_COMMIT_TIME%/$BUILD_COMMIT_TIME/" -e "s/%BUILD_COMMIT_BRANCH%/$BUILD_COMMIT_BRANCH/"\
-             -e 's#^<h\([123456]\)\(.*\)id="\([^"]*\)"\(.*\)#<h\1 class="d-inline-block"\2id="\3"\4<a class="btn btn-link mb-2" href="\#\3"><svg class="bi heading-anchor-icon"><title>Link icon</title></svg></a>#'\
+             -e 's#^<h\([123456]\)\(.*\)id="\([^"]*\)"\(.*\)</h\1>#<h\1\2id="\3"><span\4</span><a class="ms-1" href="\#\3"><svg class="bi heading-anchor-icon"><title>Link icon</title></svg></a></h\1>#'\
              "output/$output_page.html"
   rm "output/$output_page.html.tmp"
 done
