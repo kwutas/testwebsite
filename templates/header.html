@@ -1,4 +1,4 @@
-  <input id="dark-mode-toggle" type="checkbox" class="btn-check" name="dark-mode-toggle" hidden>
+  <input type="checkbox" id="dark-mode-toggle" hidden>
   <div id="background" class="h-100 overflow-x-hidden bg-secondary-subtle">
     <div id="foreground" class="mx-auto my-4 pt-2 pb-1 px-3 bg-body border border-secondary">
       <header>
@@ -9,24 +9,24 @@
             <img height="64" class="pe-2" src="assets/icon.png" alt="Programming Club logo">
           </picture>
           <h1 class="me-auto">Programming Club</h1>
-          <label class="btn btn-link mb-2 d-none d-sm-block" for="dark-mode-toggle" tabindex="0" onclick="ToggleDarkMode()" onkeydown="ToggleDarkMode()">
+          <label for="dark-mode-toggle" class="btn btn-link mb-2 d-none d-sm-block" tabindex="0" onclick="ToggleDarkMode()" onkeydown="ToggleDarkMode()">
             <svg class="bi bg-warning light-mode-icon"><title>Sun icon</title></svg>
             <svg class="bi bg-white dark-mode-icon"><title>Moon icon</title></svg>
           </label>
         </div>
-        <!-- TODO: Support toggling menu without js on mobile -->
         <!-- TODO: Decide if .navbar-expand-sm would be fine -->
-        <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-md" role="navigation">
           <div class="container-fluid ps-2 pe-0 pe-sm-2">
-            <button type="button" class="navbar-toggler mt-2" data-bs-toggle="collapse" data-bs-target="#navbarPages" aria-controls="navbarPages" aria-expanded="false" aria-label="Toggle header navigation with pages">
+            <input type="checkbox" id="nav-toggle" hidden>
+            <label for="nav-toggle" class="navbar-toggler mt-2" tabindex="0" aria-haspopup="true" aria-controls="navbar-pages" aria-expanded="false" aria-label="Toggle header navigation with pages">
               <span class="navbar-toggler-icon"></span>
-            </button>
-            <label class="btn btn-link mt-2 d-block d-sm-none" for="dark-mode-toggle" tabindex="0" onclick="ToggleDarkMode()" onkeydown="ToggleDarkMode()">
+            </label>
+            <label for="dark-mode-toggle" class="btn btn-link mt-2 d-block d-sm-none" tabindex="0" onclick="ToggleDarkMode()" onkeydown="ToggleDarkMode()">
               <svg class="bi text-bg-warning light-mode-icon"><title>Sun icon</title></svg>
               <svg class="bi bg-white dark-mode-icon"><title>Moon icon</title></svg>
             </label>
-            <div id="navbarPages" class="collapse navbar-collapse pt-3">
-              <ul class="navbar-nav nav-justified w-100 mb-2 mb-md-0">%NAVBAR_ITEMS%</ul>
+            <div id="navbar-pages" class="navbar-collapse overflow-hidden pt-3">
+              <ul class="navbar-nav nav-justified w-100 mb-2 mb-md-0" aria-label="submenu">%NAVBAR_ITEMS%</ul>
             </div>
           </div>
         </nav>

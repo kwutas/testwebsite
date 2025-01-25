@@ -10,6 +10,8 @@ We aim to design projects that are accessible for people of varying skill levels
 We only accept contributions to our projects from members so if you are interested but are not one yet, then please visit our Rubric page to become one.
 Additionally, any contributions made to our projects must include a copyright assignment to the Club. We plan to formalise this project in future to make it easy to do for first time contributors.
 
+<!-- TODO: Fix or hide dropdowns with no js -->
+<!-- TODO: Support carousels with no js? -->
 [Toggle all example dropdowns](#){role="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="true" aria-controls="textAdventureExamples discordBotExamples minecraftExamples"}
 
 ### Untitled Text Adventure
