@@ -17,15 +17,15 @@
         <!-- TODO: Decide if .navbar-expand-sm would be fine -->
         <nav class="navbar navbar-expand-md" role="navigation">
           <div class="container-fluid ps-2 pe-0 pe-sm-2">
-            <input type="checkbox" id="nav-toggle" hidden>
-            <label for="nav-toggle" class="navbar-toggler mt-2" tabindex="0" aria-haspopup="true" aria-controls="navbar-pages" aria-expanded="false" aria-label="Toggle header navigation with pages">
+            <input type="checkbox" id="navbar-pages-toggle" class="navbar-toggler-state" hidden>
+            <label for="navbar-pages-toggle" class="navbar-toggler mt-2" tabindex="0" aria-haspopup="true" aria-controls="navbar-pages" aria-expanded="false" aria-label="Toggle header navigation with pages">
               <span class="navbar-toggler-icon"></span>
             </label>
             <label for="dark-mode-toggle" class="btn btn-link mt-2 d-block d-sm-none" tabindex="0" onclick="ToggleDarkMode()" onkeydown="ToggleDarkMode()">
               <svg class="bi text-bg-warning light-mode-icon"><title>Sun icon</title></svg>
               <svg class="bi bg-white dark-mode-icon"><title>Moon icon</title></svg>
             </label>
-            <div id="navbar-pages" class="navbar-collapse overflow-hidden pt-3">
+            <div id="navbar-pages" class="navbar-collapse overflow-hidden d-block pt-3">
               <ul class="navbar-nav nav-justified w-100 mb-2 mb-md-0" aria-label="submenu">%NAVBAR_ITEMS%</ul>
             </div>
           </div>
